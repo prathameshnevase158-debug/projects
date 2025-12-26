@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*************************************************
   1. Smooth Scroll for Navbar Links
 *************************************************/
@@ -137,3 +138,9 @@ document.querySelectorAll("button").forEach(button => {
     }, 600);
   });
 });
+=======
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+>>>>>>> 20312985f523d300fa95ab079cf18e05219b6817
