@@ -8,9 +8,10 @@
 body {
     background: linear-gradient(to right, #141e30, #243b55);
     color: white;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -18,7 +19,9 @@ body {
     padding: 15px 50px;
     position: sticky;
     top: 0;
+    z-index: 1000;
     background: rgba(0,0,0,0.6);
+    transition: 0.3s;
 }
 
 .navbar ul {
@@ -33,11 +36,17 @@ body {
     transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
     color: #00adb5;
 }
 
-/* Hero */
+/* Navbar scroll effect (JS) */
+.nav-scroll {
+    background: rgba(0,0,0,0.9);
+}
+
+/* ================= HERO ================= */
 .hero {
     height: 90vh;
     display: flex;
@@ -66,28 +75,41 @@ body {
     color: #00adb5;
 }
 
-.btn {
+/* Typing text */
+#typing {
+    margin: 10px 0;
+    color: #00adb5;
+    font-weight: 500;
+}
+
+/* ================= BUTTON ================= */
+.btn,
+#darkBtn {
     margin-top: 20px;
     padding: 12px 30px;
     background: #00adb5;
     color: white;
     text-decoration: none;
     border-radius: 30px;
+    border: none;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.btn:hover {
+.btn:hover,
+#darkBtn:hover {
     background: white;
     color: #00adb5;
 }
 
-/* Sections */
+/* ================= SECTIONS ================= */
 section {
-    padding: 60px 80px;
+    padding: 40px 50px;
 }
 
-/* Cards */
-.skill-box, .project-box {
+/* ================= CARDS ================= */
+.skill-box,
+.project-box {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -98,6 +120,7 @@ section {
     padding: 20px 30px;
     border-radius: 15px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -105,7 +128,68 @@ section {
     background: #00adb5;
 }
 
-/* Responsive */
+/* ================= SCROLL TO TOP ================= */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: #00adb5;
+    color: white;
+    transition: 0.3s;
+}
+
+#topBtn:hover {
+    background: white;
+    color: #00adb5;
+}
+
+/* ================= RIPPLE EFFECT ================= */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button .ripple {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* ================= DARK MODE ================= */
+.dark {
+    background: #111;
+    color: white;
+}
+
+.dark .navbar {
+    background: rgba(0,0,0,0.9);
+}
+
+.dark .card {
+    background: rgba(255,255,255,0.15);
+}
+
+/* ================= RESPONSIVE ================= */
 @media(max-width: 768px) {
     section {
         padding: 40px 20px;
@@ -113,5 +197,6 @@ section {
 
     .navbar {
         flex-direction: column;
+        gap: 10px;
     }
 }

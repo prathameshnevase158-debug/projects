@@ -11,26 +11,33 @@
 </head>
 <body>
 
-<nav class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
     <h2 class="logo">Prathamesh</h2>
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 </nav>
 
-<!-- HERO SECTION WITH IMAGE -->
+<!-- HERO SECTION -->
 <section class="hero" id="home">
-    <img src="my photo.jpg" alt="Profile Image" class="profile-img">
+    <img src="my photo.jpg" alt="Profile Image" class="profile-img" id="profileImg">
 
     <h1>Hi, I'm <span>Prathamesh</span></h1>
+
+    <!-- Typing text -->
+    <h2 id="typing"></h2>
+
     <p>MERN Stack Developer (Fresher)</p>
-    <a href="prathamesh resume[1].docx" class="btn">Download Resume</a>
+
+    <a href="prathamesh resume[1].docx" class="btn" download>Download Resume</a>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="about">
     <h2>About Me</h2>
     <p>
@@ -39,30 +46,42 @@
     </p>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="skills">
     <h2>Skills</h2>
     <div class="skill-box">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">React (Learning)</div>
+        <div class="card skill-card">HTML</div>
+        <div class="card skill-card">CSS</div>
+        <div class="card skill-card">JavaScript</div>
+        <div class="card skill-card">React (Learning)</div>
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-box">
-        <div class="card">Portfolio Website</div>
-        <div class="card">Landing Page</div>
-        <div class="card">MERN App (Coming Soon)</div>
+        <div class="card project-card">Portfolio Website</div>
+        <div class="card project-card">Landing Page</div>
+        <div class="card project-card">MERN App (Coming Soon)</div>
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <p>Email: example@gmail.com</p>
     <p>Mobile: 9XXXXXXXXX</p>
 </section>
+
+<!-- DARK MODE BUTTON -->
+<button id="darkBtn">Dark Mode</button>
+
+<!-- SCROLL TO TOP -->
+<button id="topBtn">↑</button>
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
 
 </body>
 </html>
