@@ -1,4 +1,9 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -83,7 +88,7 @@ body {
 
 /* Sections */
 section {
-    padding: 60px 80px;
+    padding: 40px 50px;
 }
 
 /* Cards */
