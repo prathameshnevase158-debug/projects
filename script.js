@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*************************************************
   1. Smooth Scroll for Navbar Links
 *************************************************/
@@ -53,7 +52,7 @@ window.addEventListener("scroll", () => {
 
 
 /*************************************************
-  4. Typing Animation (Hero Section)
+  4. Typing Animation
 *************************************************/
 const typingText = "Hi, I am Prathamesh | MERN Stack Developer";
 let typingIndex = 0;
@@ -106,7 +105,7 @@ darkBtn.addEventListener("click", () => {
 
 
 /*************************************************
-  7. Project Card Hover Animation (Extra Smooth)
+  7. Project Card Hover Effect
 *************************************************/
 document.querySelectorAll(".project-card").forEach(card => {
   card.addEventListener("mouseenter", () => {
@@ -138,9 +137,3 @@ document.querySelectorAll("button").forEach(button => {
     }, 600);
   });
 });
-=======
-function toggleDark() {
-  document.body.classList.toggle("dark");
-}
-
->>>>>>> 20312985f523d300fa95ab079cf18e05219b6817
